@@ -47,3 +47,151 @@ h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
+:root {
+  --min-screen-width: 320px;
+  --max-screen-width: 1600px;
+  --text-xs: clamp(0.79rem, calc(-0.2vw + 0.83rem), 0.63rem);
+  --text-s: clamp(0.89rem, calc(-0.06vw + 0.9rem), 0.84rem);
+  --text-m: clamp(1rem, calc(0.16vw + 0.97rem), 1.13rem);
+  --text-l: clamp(1.13rem, calc(0.47vw + 1.03rem), 1.5rem);
+  --text-xl: clamp(1.27rem, calc(0.92vw + 1.08rem), 2rem);
+  --text-2xl: clamp(1.42rem, calc(1.55vw + 1.11rem), 2.66rem);
+  --text-3xl: clamp(1.6rem, calc(2.44vw + 1.11rem), 3.55rem);
+  --text-4xl: clamp(1.8rem, calc(3.67vw + 1.07rem), 4.74rem);
+  --space-4xs: clamp(0.33rem, calc(-0.02vw + 0.33rem), 0.31rem);
+  --space-3xs: clamp(0.41rem, calc(0.04vw + 0.4rem), 0.44rem);
+  --space-2xs: clamp(0.51rem, calc(0.13vw + 0.48rem), 0.62rem);
+  --space-xs: clamp(0.64rem, calc(0.29vw + 0.58rem), 0.88rem);
+  --space-s: clamp(0.8rem, calc(0.55vw + 0.69rem), 1.24rem);
+  --space-m: clamp(1rem, calc(0.94vw + 0.81rem), 1.75rem);
+  --space-l: clamp(1.25rem, calc(1.53vw + 0.94rem), 2.47rem);
+  --space-xl: clamp(1.56rem, calc(2.42vw + 1.08rem), 3.5rem);
+  --space-2xl: clamp(1.95rem, calc(3.74vw + 1.2rem), 4.95rem);
+  --space-3xl: clamp(2.44rem, calc(5.69vw + 1.3rem), 7rem);
+  --space-4xl: clamp(3.05rem, calc(8.55vw + 1.34rem), 9.89rem);
+  --columns-1: repeat(1, minmax(0, 1fr));
+  --columns-2: repeat(2, minmax(0, 1fr));
+  --columns-3: repeat(3, minmax(0, 1fr));
+  --columns-4: repeat(4, minmax(0, 1fr));
+  --columns-5: repeat(5, minmax(0, 1fr));
+  --columns-6: repeat(6, minmax(0, 1fr));
+  --columns-7: repeat(7, minmax(0, 1fr));
+  --columns-8: repeat(8, minmax(0, 1fr));
+  --radius-xs: clamp(0.25rem, calc(0vw + 0.25rem), 0.25rem);
+  --radius-s: clamp(0.38rem, calc(-0.16vw + 0.53rem), 0.5rem);
+  --radius-m: clamp(0.63rem, calc(-0.16vw + 0.78rem), 0.75rem);
+  --radius-l: clamp(1rem, calc(-0.31vw + 1.31rem), 1.25rem);
+  --radius-xl: clamp(1.63rem, calc(-0.47vw + 2.09rem), 2rem);
+  --radius-full: 999rem;
+  --shadow-xs: 0 1px 2px var(--shadow-primary);
+  --shadow-s: 0 1.5px 3px var(--shadow-primary);
+  --shadow-m: 0 2px 6px var(--shadow-primary);
+  --shadow-l: 0 3px 12px var(--shadow-primary);
+  --shadow-xl: 0 6px 48px var(--shadow-primary);
+}
+
+section {
+  padding-inline: var(--space-m);
+}
+
+.container {
+  max-width: var(--max-screen-width);
+  margin-inline: auto;
+}
+
+:root {
+  --primary: hsla(238, 100%, 62%, 1);
+  --primary-5: hsla(238, 100%, 62%, 0.05);
+  --primary-10: hsla(238, 100%, 62%, 0.1);
+  --primary-20: hsla(238, 100%, 62%, 0.2);
+  --primary-30: hsla(238, 100%, 62%, 0.3);
+  --primary-40: hsla(238, 100%, 62%, 0.4);
+  --primary-50: hsla(238, 100%, 62%, 0.5);
+  --primary-60: hsla(238, 100%, 62%, 0.6);
+  --primary-70: hsla(238, 100%, 62%, 0.7);
+  --primary-80: hsla(238, 100%, 62%, 0.8);
+  --primary-90: hsla(238, 100%, 62%, 0.9);
+  --primary-d-1: hsla(240, 56%, 50%, 1);
+  --primary-d-2: hsla(243, 54%, 37%, 1);
+  --primary-d-3: hsla(246, 51%, 25%, 1);
+  --primary-d-4: hsla(251, 42%, 13%, 1);
+  --primary-l-1: hsla(247, 100%, 70%, 1);
+  --primary-l-2: hsla(251, 100%, 77%, 1);
+  --primary-l-3: hsla(253, 100%, 85%, 1);
+  --primary-l-4: hsla(256, 100%, 92%, 1);
+  --secondary: hsla(29, 100%, 50%, 1);
+  --secondary-5: hsla(29, 100%, 50%, 0.05);
+  --secondary-10: hsla(29, 100%, 50%, 0.1);
+  --secondary-20: hsla(29, 100%, 50%, 0.2);
+  --secondary-30: hsla(29, 100%, 50%, 0.3);
+  --secondary-40: hsla(29, 100%, 50%, 0.4);
+  --secondary-50: hsla(29, 100%, 50%, 0.5);
+  --secondary-60: hsla(29, 100%, 50%, 0.6);
+  --secondary-70: hsla(29, 100%, 50%, 0.7);
+  --secondary-80: hsla(29, 100%, 50%, 0.8);
+  --secondary-90: hsla(29, 100%, 50%, 0.9);
+  --secondary-d-1: hsla(27, 88%, 42%, 1);
+  --secondary-d-2: hsla(26, 79%, 32%, 1);
+  --secondary-d-3: hsla(25, 70%, 22%, 1);
+  --secondary-d-4: hsla(26, 61%, 12%, 1);
+  --secondary-l-1: hsla(26, 100%, 64%, 1);
+  --secondary-l-2: hsla(26, 100%, 73%, 1);
+  --secondary-l-3: hsla(26, 100%, 82%, 1);
+  --secondary-l-4: hsla(27, 100%, 91%, 1);
+  --bg-body: hsla(0, 0%, 90%, 1);
+  --bg-surface: hsla(0, 0%, 100%, 1);
+  --text-body: hsla(0, 0%, 25%, 1);
+  --text-title: hsla(0, 0%, 0%, 1);
+  --border-primary: hsla(0, 0%, 50%, 0.25);
+  --shadow-primary: hsla(0, 0%, 0%, 0.15);
+  --light: hsla(85, 0%, 100%, 1);
+  --light-5: hsla(0, 0%, 100%, 0.05);
+  --light-10: hsla(0, 0%, 100%, 0.1);
+  --light-20: hsla(0, 0%, 100%, 0.2);
+  --light-30: hsla(0, 0%, 100%, 0.3);
+  --light-40: hsla(0, 0%, 100%, 0.4);
+  --light-50: hsla(0, 0%, 100%, 0.5);
+  --light-60: hsla(0, 0%, 100%, 0.6);
+  --light-70: hsla(0, 0%, 100%, 0.7);
+  --light-80: hsla(0, 0%, 100%, 0.8);
+  --light-90: hsla(0, 0%, 100%, 0.9);
+  --dark: hsla(0, 0%, 0%, 1);
+  --dark-5: hsla(0, 0%, 0%, 0.05);
+  --dark-10: hsla(0, 0%, 0%, 0.1);
+  --dark-20: hsla(0, 0%, 0%, 0.2);
+  --dark-30: hsla(0, 0%, 0%, 0.3);
+  --dark-40: hsla(0, 0%, 0%, 0.4);
+  --dark-50: hsla(0, 0%, 0%, 0.5);
+  --dark-60: hsla(0, 0%, 0%, 0.6);
+  --dark-70: hsla(0, 0%, 0%, 0.7);
+  --dark-80: hsla(0, 0%, 0%, 0.8);
+  --dark-90: hsla(0, 0%, 0%, 0.9);
+  --success: hsla(136, 95%, 56%, 1);
+  --success-5: hsla(136, 95%, 56%, 0.05);
+  --success-10: hsla(136, 95%, 56%, 0.1);
+  --success-20: hsla(136, 95%, 56%, 0.2);
+  --success-30: hsla(136, 95%, 56%, 0.3);
+  --success-40: hsla(136, 95%, 56%, 0.4);
+  --success-50: hsla(136, 95%, 56%, 0.5);
+  --success-60: hsla(136, 95%, 56%, 0.6);
+  --success-70: hsla(136, 95%, 56%, 0.7);
+  --success-80: hsla(136, 95%, 56%, 0.8);
+  --success-90: hsla(136, 95%, 56%, 0.9);
+  --error: hsla(351, 95%, 56%, 1);
+  --error-5: hsla(351, 95%, 56%, 0.05);
+  --error-10: hsla(351, 95%, 56%, 0.1);
+  --error-20: hsla(351, 95%, 56%, 0.2);
+  --error-30: hsla(351, 95%, 56%, 0.3);
+  --error-40: hsla(351, 95%, 56%, 0.4);
+  --error-50: hsla(351, 95%, 56%, 0.5);
+  --error-60: hsla(351, 95%, 56%, 0.6);
+  --error-70: hsla(351, 95%, 56%, 0.7);
+  --error-80: hsla(351, 95%, 56%, 0.8);
+  --error-90: hsla(351, 95%, 56%, 0.9);
+}
+
+.hero {
+  background: red;
+  color: var(--primary-l-4);
+}
