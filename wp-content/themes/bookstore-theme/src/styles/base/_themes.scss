@@ -1,0 +1,38 @@
+// base/_theme.scss
+
+// 🎨 Define theme tokens
+$themes: (
+        light: (
+        ),
+        dark: (
+        )
+);
+
+// 🔧 Mixin to output variables for a theme
+@mixin theme-vars($map, $theme) {
+  @each $name, $value in map-get($map, $theme) {
+    --#{$name}: #{$value};
+  }
+}
+
+// ✅ Default theme (light)
+:root {
+  @include theme-vars($themes, light);
+}
+
+// ✅ Manual override: dark
+[data-theme='dark'] {
+  @include theme-vars($themes, dark);
+}
+
+// ✅ Manual override: light (optional)
+[data-theme='light'] {
+  @include theme-vars($themes, light);
+}
+
+// 🌙 Auto dark fallback unless manually overridden
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    @include theme-vars($themes, dark);
+  }
+}
