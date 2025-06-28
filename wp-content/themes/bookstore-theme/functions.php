@@ -16,3 +16,6 @@ function setup_bookstore_theme(): void {
 }
 
 add_action( 'after_setup_theme', 'setup_bookstore_theme' );
+
+//require 'inc/bookstore-post-types.php';
+require 'post-types/book.php';
