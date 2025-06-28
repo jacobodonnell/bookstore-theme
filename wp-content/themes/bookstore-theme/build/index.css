@@ -91,8 +91,12 @@ h1, h2, h3, h4, h5, h6 {
   --shadow-xl: 0 6px 48px var(--shadow-primary);
 }
 
+body {
+  font-family: "General Sans", serif;
+}
+
 section {
-  padding-inline: var(--space-m);
+  padding-inline: var(--space-l);
 }
 
 .container {
@@ -191,9 +195,24 @@ section {
   --error-90: hsla(351, 95%, 56%, 0.9);
 }
 
-.hero {
-  background: red;
-  color: var(--primary-l-4);
+@font-face {
+  font-family: "General Sans";
+  src: url(fonts/GeneralSans-Variable.65a7e76e.woff2) format("woff2"), url(fonts/GeneralSans-Variable.bc2b1247.woff) format("woff");
+  font-weight: 100 900; /* Variable range */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "General Sans";
+  src: url(fonts/GeneralSans-VariableItalic.8d45d5d4.woff2) format("woff2"), url(fonts/GeneralSans-VariableItalic.e4ae865b.woff) format("woff");
+  font-weight: 100 900; /* Variable range */
+  font-style: italic;
+  font-display: swap;
+}
+.hero__heading {
+  font-size: var(--text-4xl);
+  color: var(--primary-d-4);
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=index.css.map*/

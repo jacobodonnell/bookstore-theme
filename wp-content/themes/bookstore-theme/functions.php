@@ -11,11 +11,8 @@ function setup_bookstore_theme(): void {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
 
-	add_image_size( 'hero', 1920, 1080, true );
-	add_image_size( 'card-large', 800, 600, true );
-	add_image_size( 'card-small', 400, 300, true );
-	add_image_size( 'square', 600, 600, true );
-	add_image_size( 'ultrawide', 2560, 1200, true );
+	add_image_size( 'author-square', 400, 400, true );
+	add_image_size( 'author-square-large', 800, 800, true );
 }
 
 add_action( 'after_setup_theme', 'setup_bookstore_theme' );

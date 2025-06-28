@@ -1,7 +1,9 @@
 // Base Styles
 @use 'base/reset';
+@use 'base/variables';
 @use 'base/globals';
 @use 'base/themes';
+@use 'base/fonts';
 
 // BEM Modules
 @use 'modules/hero';

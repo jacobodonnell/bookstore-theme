@@ -1,4 +1,8 @@
 .hero {
-  background: red;
-  color: var(--primary-l-4)
+
+  &__heading {
+    font-size: var(--text-4xl);
+    color: var(--primary-d-4);
+    font-weight: 700;
+  }
 }

@@ -1,58 +1,9 @@
-:root {
-  --min-screen-width: 320px;
-  --max-screen-width: 1600px;
-
-  //  Typography
-  --text-xs: clamp(0.79rem, calc(-0.2vw + 0.83rem), 0.63rem);
-  --text-s: clamp(0.89rem, calc(-0.06vw + 0.9rem), 0.84rem);
-  --text-m: clamp(1rem, calc(0.16vw + 0.97rem), 1.13rem);
-  --text-l: clamp(1.13rem, calc(0.47vw + 1.03rem), 1.5rem);
-  --text-xl: clamp(1.27rem, calc(0.92vw + 1.08rem), 2rem);
-  --text-2xl: clamp(1.42rem, calc(1.55vw + 1.11rem), 2.66rem);
-  --text-3xl: clamp(1.6rem, calc(2.44vw + 1.11rem), 3.55rem);
-  --text-4xl: clamp(1.8rem, calc(3.67vw + 1.07rem), 4.74rem);
-
-  // Spacing
-  --space-4xs: clamp(0.33rem, calc(-0.02vw + 0.33rem), 0.31rem);
-  --space-3xs: clamp(0.41rem, calc(0.04vw + 0.4rem), 0.44rem);
-  --space-2xs: clamp(0.51rem, calc(0.13vw + 0.48rem), 0.62rem);
-  --space-xs: clamp(0.64rem, calc(0.29vw + 0.58rem), 0.88rem);
-  --space-s: clamp(0.8rem, calc(0.55vw + 0.69rem), 1.24rem);
-  --space-m: clamp(1rem, calc(0.94vw + 0.81rem), 1.75rem);
-  --space-l: clamp(1.25rem, calc(1.53vw + 0.94rem), 2.47rem);
-  --space-xl: clamp(1.56rem, calc(2.42vw + 1.08rem), 3.5rem);
-  --space-2xl: clamp(1.95rem, calc(3.74vw + 1.2rem), 4.95rem);
-  --space-3xl: clamp(2.44rem, calc(5.69vw + 1.3rem), 7rem);
-  --space-4xl: clamp(3.05rem, calc(8.55vw + 1.34rem), 9.89rem);
-
-  // grid utils
-  --columns-1: repeat(1, minmax(0, 1fr));
-  --columns-2: repeat(2, minmax(0, 1fr));
-  --columns-3: repeat(3, minmax(0, 1fr));
-  --columns-4: repeat(4, minmax(0, 1fr));
-  --columns-5: repeat(5, minmax(0, 1fr));
-  --columns-6: repeat(6, minmax(0, 1fr));
-  --columns-7: repeat(7, minmax(0, 1fr));
-  --columns-8: repeat(8, minmax(0, 1fr));
-
-  // corners
-  --radius-xs: clamp(0.25rem, calc(0vw + 0.25rem), 0.25rem);
-  --radius-s: clamp(0.38rem, calc(-0.16vw + 0.53rem), 0.5rem);
-  --radius-m: clamp(0.63rem, calc(-0.16vw + 0.78rem), 0.75rem);
-  --radius-l: clamp(1rem, calc(-0.31vw + 1.31rem), 1.25rem);
-  --radius-xl: clamp(1.63rem, calc(-0.47vw + 2.09rem), 2rem);
-  --radius-full: 999rem;
-
-  // Shadows
-  --shadow-xs: 0 1px 2px var(--shadow-primary);
-  --shadow-s: 0 1.5px 3px var(--shadow-primary);
-  --shadow-m: 0 2px 6px var(--shadow-primary);
-  --shadow-l: 0 3px 12px var(--shadow-primary);
-  --shadow-xl: 0 6px 48px var(--shadow-primary);
+body {
+  font-family: 'General Sans', serif;
 }
 
 section {
-  padding-inline: var(--space-m);
+  padding-inline: var(--space-l);
 }
 
 .container {
