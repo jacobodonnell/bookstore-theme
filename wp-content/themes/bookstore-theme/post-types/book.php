@@ -8,7 +8,7 @@
 /**
  * Registers the `book` post type.
  */
-function bookstore_theme_init(): void {
+function register_book_post_type(): void {
 	register_post_type(
 		'book',
 		[
@@ -52,11 +52,12 @@ function bookstore_theme_init(): void {
 			'show_in_rest'          => true,
 			'rest_base'             => 'book',
 			'rest_controller_class' => 'WP_REST_Posts_Controller',
+			'taxonomies'            => [ 'author' ]
 		]
 	);
 }
 
-add_action( 'init', 'bookstore_theme_init' );
+add_action( 'init', 'register_book_post_type' );
 
 /**
  * Sets the post updated messages for the `book` post type.
@@ -65,7 +66,7 @@ add_action( 'init', 'bookstore_theme_init' );
  *
  * @return array Messages for the `book` post type.
  */
-function bookstore_theme_updated_messages( $messages ) {
+function set_book_updated_messages( $messages ): array {
 	global $post;
 
 	$permalink = get_permalink( $post );
@@ -101,7 +102,7 @@ function bookstore_theme_updated_messages( $messages ) {
 	return $messages;
 }
 
-add_filter( 'post_updated_messages', 'bookstore_theme_updated_messages' );
+add_filter( 'post_updated_messages', 'set_book_updated_messages' );
 
 /**
  * Sets the bulk post updated messages for the `book` post type.
@@ -112,7 +113,7 @@ add_filter( 'post_updated_messages', 'bookstore_theme_updated_messages' );
  *
  * @return array Bulk messages for the `book` post type.
  */
-function bookstore_theme_bulk_updated_messages( $bulk_messages, $bulk_counts ) {
+function set_book_bulk_updated_messages( $bulk_messages, $bulk_counts ) {
 	global $post;
 
 	$bulk_messages['book'] = array(
@@ -137,4 +138,4 @@ function bookstore_theme_bulk_updated_messages( $bulk_messages, $bulk_counts ) {
 	return $bulk_messages;
 }
 
-add_filter( 'bulk_post_updated_messages', 'bookstore_theme_bulk_updated_messages', 10, 2 );
+add_filter( 'bulk_post_updated_messages', 'set_book_bulk_updated_messages', 10, 2 );
