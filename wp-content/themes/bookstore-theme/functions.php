@@ -40,3 +40,6 @@ require 'post-types/book.php';
 require 'taxonomies/author.php';
 require 'taxonomies/genre.php';
 require 'taxonomies/publisher.php';
+
+require 'inc/book_gutenberg_helper_functions.php';
+

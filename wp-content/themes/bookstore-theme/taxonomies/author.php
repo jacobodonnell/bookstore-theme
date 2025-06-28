@@ -18,7 +18,7 @@ function register_taxonomy_author(): void {
 			'public'                => true,
 			'show_in_nav_menus'     => true,
 			'show_ui'               => true,
-			'show_admin_column'     => false,
+			'show_admin_column'     => true,
 			'query_var'             => true,
 			'rewrite'               => true,
 			'capabilities'          => [
