@@ -17,9 +17,6 @@ function setup_bookstore_theme(): void {
 
 add_action( 'after_setup_theme', 'setup_bookstore_theme' );
 
-require 'post-types/book.php';
-require 'taxonomies/author.php';
-
 add_action( 'after_switch_theme', function () {
 	$front_page_id = get_page_by_path( 'home' );
 
@@ -38,3 +35,8 @@ add_action( 'after_switch_theme', function () {
 	update_option( 'show_on_front', 'page' );
 	update_option( 'page_on_front', $front_page_id );
 } );
+
+require 'post-types/book.php';
+require 'taxonomies/author.php';
+require 'taxonomies/genre.php';
+require 'taxonomies/publisher.php';

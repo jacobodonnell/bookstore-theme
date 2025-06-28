@@ -67,7 +67,7 @@ add_action( 'init', 'register_taxonomy_author' );
  *
  * @return array Messages for the `author` taxonomy.
  */
-function set_author_taxonomy_updated_messages( $messages ): array {
+function set_author_taxonomy_updated_messages( array $messages ): array {
 
 	$messages['author'] = [
 		0 => '', // Unused. Messages start at index 1.
