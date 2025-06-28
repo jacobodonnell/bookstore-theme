@@ -45,7 +45,7 @@ function register_book_post_type(): void {
 			'show_in_nav_menus'     => true,
 			'supports'              => [ 'title', 'editor', 'thumbnail', 'revisions' ],
 			'has_archive'           => true,
-			'rewrite'               => true,
+			'rewrite'               => [ 'slug' => 'books' ],
 			'query_var'             => true,
 			'menu_position'         => null,
 			'menu_icon'             => 'dashicons-book',
