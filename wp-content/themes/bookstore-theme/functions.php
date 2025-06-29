@@ -41,6 +41,7 @@ require 'taxonomies/author.php';
 require 'taxonomies/genre.php';
 require 'taxonomies/publisher.php';
 require 'taxonomies/language.php';
+require 'taxonomies/format.php';
 
 require 'inc/book_gutenberg_helper_functions.php';
 

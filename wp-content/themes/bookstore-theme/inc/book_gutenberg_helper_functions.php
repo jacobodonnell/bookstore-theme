@@ -11,6 +11,7 @@ function hide_book_gutenberg_panels(): void {
                 wp.data.dispatch('core/edit-post').removeEditorPanel('taxonomy-panel-author');
                 wp.data.dispatch('core/edit-post').removeEditorPanel('taxonomy-panel-publisher');
                 wp.data.dispatch('core/edit-post').removeEditorPanel('taxonomy-panel-language');
+                wp.data.dispatch('core/edit-post').removeEditorPanel('taxonomy-panel-format');
                 // wp.data.dispatch('core/edit-post').removeEditorPanel('featured-image');
             });
         </script>

@@ -52,7 +52,7 @@ function register_book_post_type(): void {
 			'show_in_rest'          => true,
 			'rest_base'             => 'book',
 			'rest_controller_class' => 'WP_REST_Posts_Controller',
-			'taxonomies'            => [ 'author', 'genre', 'publisher' ]
+			'taxonomies'            => [ 'author', 'genre', 'publisher', 'format', 'language' ]
 		]
 	);
 }
