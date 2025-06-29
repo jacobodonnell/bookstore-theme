@@ -10,7 +10,8 @@ function hide_book_gutenberg_panels(): void {
                 wp.data.dispatch('core/edit-post').removeEditorPanel('taxonomy-panel-genre');
                 wp.data.dispatch('core/edit-post').removeEditorPanel('taxonomy-panel-author');
                 wp.data.dispatch('core/edit-post').removeEditorPanel('taxonomy-panel-publisher');
-                wp.data.dispatch('core/edit-post').removeEditorPanel('featured-image');
+                wp.data.dispatch('core/edit-post').removeEditorPanel('taxonomy-panel-language');
+                // wp.data.dispatch('core/edit-post').removeEditorPanel('featured-image');
             });
         </script>
 		<?php
@@ -21,14 +22,14 @@ add_action( 'admin_footer', 'hide_book_gutenberg_panels' );
 
 
 // ACF Image field is used for thumbnail so it can be Required
-// This will save featured_image_acf to thumbnail on Book save
+// This will save cover to thumbnail on Book save
 function sync_acf_image_to_thumbnail( $post_id ): void {
 	// Make sure this runs only for posts, not ACF options pages etc
 	if ( get_post_type( $post_id ) !== 'book' ) {
 		return;
 	}
 
-	$image    = get_field( 'featured_image_acf', $post_id );
+	$image    = get_field( 'cover', $post_id );
 	$image_id = is_array( $image ) ? $image['ID'] : $image;
 	if ( $image_id ) {
 		set_post_thumbnail( $post_id, $image_id );
@@ -50,9 +51,9 @@ add_filter( 'acf/update_value/name=price', 'convert_price_to_cents', 10, 3 );
 
 
 // Book prices are converted to dollars when displayed to user
-function convert_price_to_dollars( $value, $post_id, $field ) {
+function convert_price_to_dollars( $value, $post_id, $field ): float {
 	if ( $value ) {
-		return $value / 100; // 1999 → 19.99
+		$value = $value / 100; // 1999 → 19.99
 	}
 
 	return $value;
