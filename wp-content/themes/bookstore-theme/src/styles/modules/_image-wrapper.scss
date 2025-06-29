@@ -1,0 +1,8 @@
+.image-wrapper {
+
+  & img {
+    width: 150px;
+    height: auto;
+    border-radius: var(--radius-xs);
+  }
+}
